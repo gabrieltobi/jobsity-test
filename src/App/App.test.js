@@ -4,7 +4,7 @@ import App from './App';
 
 test('add new reminder', () => {
   const { getByText, getByTestId } = render(<App />);
-  const day = getByTestId('day-15')
+  const day = getByTestId(`day-${new Date().getMonth() + 1}-15`)
   day.click();
 
   const reminder = getByTestId('reminder')

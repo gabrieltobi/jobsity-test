@@ -99,7 +99,7 @@ function App () {
           return (
             <div key={`week-${weekDay}`} className='flex flex-1 flex-row' style={{ height: `calc(100% / ${weeksQty})` }}>
               {daysMap[weekDay].map((day) => (<Day
-                key={`day-${day.date.getDate()}`}
+                key={`day-${day.date.getMonth() + 1}-${day.date.getDate()}`}
                 openModal={openModal}
                 {...day}
               />))}

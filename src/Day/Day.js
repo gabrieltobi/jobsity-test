@@ -31,7 +31,7 @@ export default function Day (props) {
                 className={`day border border-gray-600 py-1 px-2 flex flex-col
                     ${isWeekend(date) ? 'bg-gray-300' : ''}`}
                 onClick={() => openModal(props)}
-                data-testid={`day-${date.getDate()}`}
+                data-testid={`day-${date.getMonth() + 1}-${date.getDate()}`}
             >
                 <div className={`font-bold text-lg
                     ${otherMonth ? 'text-gray-500' : (isWeekend(date) ? 'text-main' : '')}`}>
