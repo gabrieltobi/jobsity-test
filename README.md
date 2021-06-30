@@ -1,68 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project was developed with the objective of fulfilling a development challenge.
 
-In the project directory, you can run:
+## How to run
 
-### `yarn start`
+- `npm i` to get the packages
+- `npm start` to run the application
+- It will open a new tab in browser with the calendar
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## The Challenge
 
-### `yarn test`
+Create a demo calendar application using React, Vue or Angular. <br />
+It should start by rendering a single month view of a calendar for the current month – along with the lines of the below illustration:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Illustration](https://github.com/gabrieltobi/jobsity-test/blob/master/illustration.jpg?raw=true)
 
-### `yarn build`
+### Mandatory Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Ability to add a new "reminder" (max 30 chars) for a user entered day and time. Also, include a city. [✔]
+- Display reminders on the calendar view in the correct time order. [✔]
+- Allow the user to select color when creating a reminder and display it appropriately. [✔]
+- Ability to edit reminders – including changing text, city, day, time and color. [✔]
+- Add a weather service call from a free API such as Open Weather Map, and get the weather forecast (ex. Rain) for the date of the calendar reminder based on the city. [✔]*
+- Unit test the functionality: Ability to add a new "reminder" (max 30 chars) for a user entered day and time. Also, include a city. [✔]
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+_* In Open Weather Map just today's weather is free, so it was made with today's weather and not the weather on the reminder date._
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Bonus (Optional)
 
-### `yarn eject`
+- Expand the calendar to support more than the current month.
+- Properly handle overflow when multiple reminders appear on the same date. [✔]
+- Functionality to delete one or ALL the reminders for a specific day.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Considerations
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Redux (or any other state manager) structure of the calendar. *
+- The project is totally focused on the front-end; please ignore the back-end.
+- Keep your code versioned with Git.
+- Feel free to use small helper libraries for:
+- UI Elements.
+- Date/Time handling.
+- You must create the calendar component yourself. Do not use calendar libraries like FullCalendar or Bootstrap Calendar.
+- If you use an external API, make sure to provide working API keys.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+_* I managed to build the app using local states only, that's why there's no redux on application. But it could be converted to work with redux too._
