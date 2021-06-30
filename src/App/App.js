@@ -57,7 +57,7 @@ function App () {
 
   useEffect(() => {
     const today = new Date()
-    const daysQty = getDaysInMonth(today.getFullYear(), today.getMonth())
+    const daysQty = getDaysInMonth(today)
     const map = {}
 
     for (let i = 1; i <= daysQty; i++) {
